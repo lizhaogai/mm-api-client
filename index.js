@@ -24,6 +24,7 @@ const Taobaoke = require('./lib/Taobaoke');
 const Settings = require('./lib/Settings');
 const SocialGroupStatus = require('./lib/SocialGroupStatus');
 const CommissionRecord = require('./lib/CommissionRecord');
+const Wechat = require('./lib/Wechat');
 /**
  * Money Mommy API Explorer.
  *
@@ -61,6 +62,7 @@ module.exports = function(baseUrl, opts) {
   client.settings = new Settings(requestor);
   client.socialGroupStatus = new SocialGroupStatus(requestor);
   client.commissionRecord = new CommissionRecord(requestor);
+  client.wechat = new Wechat(requestor);
 
   return client;
 };
