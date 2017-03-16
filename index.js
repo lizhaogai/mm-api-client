@@ -26,6 +26,7 @@ const SocialGroupStatus = require('./lib/SocialGroupStatus');
 const CommissionRecord = require('./lib/CommissionRecord');
 const Wechat = require('./lib/Wechat');
 const AchievementImport = require('./lib/AchievementImport');
+const Bank = require('./lib/Bank');
 /**
  * Money Mommy API Explorer.
  *
@@ -65,6 +66,7 @@ module.exports = function(baseUrl, opts) {
   client.commissionRecord = new CommissionRecord(requestor);
   client.wechat = new Wechat(requestor);
   client.achievementImport = new AchievementImport(requestor);
+  client.bank = new Bank(requestor);
 
   return client;
 };
